@@ -1,12 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<!-- Library reqs -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+<div class="guessed"></div>
 
 
 
 
-Track wins
+	<script type="text/javascript">
+		var towns = [ 
 
-Track losses
+			"Acadia",
+			"Bunker Hill",
+			"Covenant",
+			"Diamond City",
+			"Far Harbor",
+			"Goodneighbor",
+			"The Institute",
+			"The Nucleus",
+			"Nuka-World",
+			"Vault 81"
 
-Track letters guessed with prepending display to user
+		];
+
+		var word = towns[Math.floor(Math.random()*towns.length)];
+
+		console.log(word)
+
+		var playfieldsize = word.length;
+
+		console.log(playfieldsize)
+
+		var key = "";
+
+		document.addEventListener("keypress", userkeypress, false);
+
+		function userkeypress(event) 
+		{
+			key += String.fromCharCode(event.charCode);
+
+
+			for (var check = 0; check <  playfieldsize; check++) {
+				console.log([check])
+			}
+
+
+			// var check = playfieldsize
+
+
+
+
+			// if (key == charAt(0) )
+
+
+
+			console.log(key)
+			console.log("myfield" + playfieldsize)
+			console.log("check" + check)
+
+
+			$(".guessed").append(key);
+			
+		}
+
+
+		
+
+
+
+
+
+	</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+<!-- need this for user guess cleansing toLowerCase() -->
+
+<!-- Track wins -->
+<!-- Track losses -->
+<!-- Track remaining guesses -->
+<!-- Track letters guessed with prepending display to user -->
+<!-- do not allow user to guess letters already guessed and not count them against remaining guesses -->
+<!-- Pool of words to use -->
+<!-- Will need to use var res = str.charAt(0); to access characters of the string -->
+
+
+
 
 
 
